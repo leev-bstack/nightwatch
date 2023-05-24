@@ -15,7 +15,7 @@ const home: NightwatchTests = {
       .perform(function(this: any) {
         const actions = this.actions({async: true});
 
-        return actions.keyDown(this.Keys['RETURN']).keyUp(this.Keys['RETURN']);
+        return actions.keyDown(this.Keys['ENTER']).keyUp(this.Keys['ENTER']);
       })
       .waitForElementVisible('.header-search-input')
       .assert.valueContains('.header-search-input', 'nightwatch')

@@ -288,7 +288,7 @@ module.exports = {
         // To find the available deviceName/platformName to run tests on,
         // run command: `xcrun simctl list devices`
         // 'safari:platformVersion': '15.0',
-        'safari:deviceName': 'iPhone 13'
+        'safari:deviceName': 'iPhone 14 Pro Max'
       },
     
       webdriver: {
@@ -447,7 +447,7 @@ module.exports = {
         'bstack:options': {
           userName: '${BROWSERSTACK_USERNAME}',
           accessKey: '${BROWSERSTACK_ACCESS_KEY}',
-          buildName: 'test-nightwatch'
+          buildName: 'test-nightwatch3'
         }
       },
 
@@ -489,7 +489,11 @@ module.exports = {
     'browserstack.safari': {
       extends: 'browserstack',
       desiredCapabilities: {
-        browserName: 'safari'
+        browserName: 'safari',
+        'bstack:options': {
+          os: 'OS X',
+          osVersion: 'Ventura'
+        }
       }
     },
     
@@ -527,7 +531,8 @@ module.exports = {
         browserName: 'safari',
         'bstack:options' : {
           osVersion: "15.5",
-          deviceName: "iPhone 13"
+          deviceName: "iPhone 13",
+          appiumVersion: "2.0.0"
         },
         browserName: 'safari'
       }

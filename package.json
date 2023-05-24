@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "nightwatch ./nightwatch/github.ts --env browserstack.chrome",
-    "mobile": "nightwatch ./nightwatch/github.ts --env browserstack.ios.safari"
+    "safari": "nightwatch ./nightwatch/github.ts --env browserstack.safari",
+    "mobile": "nightwatch ./nightwatch/github.ts --env browserstack.ios.safari",
+    "android": "nightwatch ./nightwatch/github.ts --env browserstack.android.chrome",
+    "sim": "nightwatch ./nightwatch/github.ts --env ios.simulator.safari"
   },
   "keywords": [],
   "author": "",
